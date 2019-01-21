@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.predic8</groupId>
+	<groupId>com.eluvio</groupId>
 	<artifactId>soa-model-parent</artifactId>
 	<version>1.6.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -38,13 +38,13 @@ Analyze a WSDL or Schema document and generate an HMTL report</description>
 	</organization>
 
 	<scm>
-		<connection>scm:git:git@github.com:membrane/soa-model.git</connection>
-		<url>https://github.com/membrane/soa-model</url>
+		<connection>scm:git:git@github.com:eluvio/soa-model.git</connection>
+		<url>https://github.com/eluvio/soa-model</url>
 	</scm>
 
 	<issueManagement>
 		<system>Github Issue Tracker</system>
-		<url>https://github.com/membrane/soa-model/issues</url>
+		<url>https://github.com/eluvio/soa-model/issues</url>
 	</issueManagement>
 
 	<modules>
@@ -56,7 +56,7 @@ Analyze a WSDL or Schema document and generate an HMTL report</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<gpg.keyname>5B8A65F6</gpg.keyname>
+		<gpg.keyname>BDADB9F3E7CE56FE3CF1A6E93E659324C635A022</gpg.keyname>
 		<groovy.version>2.4.12</groovy.version>
 		<slf4j.version>1.7.21</slf4j.version>
 	</properties>
@@ -136,7 +136,7 @@ Analyze a WSDL or Schema document and generate an HMTL report</description>
 					<plugin>
 						<groupId>org.sonatype.plugins</groupId>
 						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.3</version>
+						<version>1.6.7</version>
 						<extensions>true</extensions>
 						<configuration>
 							<serverId>ossrh</serverId>
@@ -144,6 +144,17 @@ Analyze a WSDL or Schema document and generate an HMTL report</description>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
 						</configuration>
 					</plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>2.5.3</version>
+            <configuration>
+              <autoVersionSubmodules>true</autoVersionSubmodules>
+              <useReleaseProfile>false</useReleaseProfile>
+              <releaseProfiles>release</releaseProfiles>
+              <goals>deploy</goals>
+            </configuration>
+          </plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>

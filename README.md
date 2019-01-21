@@ -1,3 +1,5 @@
+Note: This is forked from https://github.com/membrane/soa-model
+
 Membrane SOA Model 
 ==================
 Check the [Repository at GitHub](https://github.com/membrane/soa-model) for the latest source code.
@@ -68,3 +70,37 @@ To run "mvn integration-test" in an isolated environment, you may run
     docker build .
 
 if you have a Docker Engine available.
+
+
+
+# Eluvio Maven Notes
+
+We usually spend are time using SBT so we need a cheatsheet for maven commands.
+
+Sonatype notes for Maven are here: https://central.sonatype.org/pages/apache-maven.html
+
+## To Compile
+
+    JAVA_HOME=/opt/java8 mvn compile
+    
+## To Test
+
+    JAVA_HOME=/opt/java8 mvn test
+    
+## To publish a -SNAPSHOT on Sonatype
+
+A `-SNAPSHOT` version will automatically publish to the Snapshots repository
+
+### Stage to Sonatype
+
+    JAVA_HOME=/opt/java8 GPG_TTY=$(tty) mvn clean deploy -P ossrh
+
+## To publish a Release version Sonatype
+
+### Prepare Release
+
+    JAVA_HOME=/opt/java8 GPG_TTY=$(tty) mvn release:clean release:prepare -P ossrh
+
+### Perform Release
+
+    JAVA_HOME=/opt/java8 mvn release:perform -P ossrh
