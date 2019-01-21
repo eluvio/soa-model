@@ -3,7 +3,7 @@
 
 	<groupId>com.eluvio</groupId>
 	<artifactId>soa-model-parent</artifactId>
-	<version>1.6.1</version>
+	<version>1.6.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>soa-model-parent</name>
@@ -39,7 +39,7 @@ Analyze a WSDL or Schema document and generate an HMTL report</description>
 	<scm>
 		<connection>scm:git:git@github.com:eluvio/soa-model.git</connection>
 		<url>https://github.com/eluvio/soa-model</url>
-	  <tag>soa-model-parent-1.6.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<issueManagement>
