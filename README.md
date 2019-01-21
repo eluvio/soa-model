@@ -1,4 +1,17 @@
-Note: This is forked from https://github.com/membrane/soa-model
+Note: This is forked from https://github.com/membrane/soa-model and published to Maven central in fix this problem https://github.com/membrane/soa-model/issues/238 (via https://github.com/membrane/soa-model/commit/0705e1c693cd79450fd6b6a31d4e97f6e350aeb2):
+
+SBT:
+
+    libraryDependencies += "com.eluvio" % "soa-model-core" % "1.6.1"
+
+Maven:
+
+    <dependency>
+      <groupId>com.eluvio</groupId>
+      <artifactId>soa-model-core</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+
 
 Membrane SOA Model 
 ==================
