@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.eluvio</groupId>
 	<artifactId>soa-model-parent</artifactId>
-	<version>1.6.1-SNAPSHOT</version>
+	<version>1.6.1</version>
 	<packaging>pom</packaging>
 
 	<name>soa-model-parent</name>
@@ -40,7 +39,8 @@ Analyze a WSDL or Schema document and generate an HMTL report</description>
 	<scm>
 		<connection>scm:git:git@github.com:eluvio/soa-model.git</connection>
 		<url>https://github.com/eluvio/soa-model</url>
-	</scm>
+	  <tag>soa-model-parent-1.6.1</tag>
+  </scm>
 
 	<issueManagement>
 		<system>Github Issue Tracker</system>

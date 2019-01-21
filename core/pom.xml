@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>soa-model-core</artifactId>
@@ -10,7 +9,7 @@
 		<groupId>com.eluvio</groupId>
 		<artifactId>soa-model-parent</artifactId>
 		<relativePath>../pom.xml</relativePath>
-		<version>1.6.1-SNAPSHOT</version>
+		<version>1.6.1</version>
 	</parent>
 
 	<dependencies>
@@ -77,15 +76,10 @@
 						</goals>
 						<configuration>
 							<target>
-								<taskdef name="groovydoc" classname="org.codehaus.groovy.ant.Groovydoc"
-									classpathref="maven.compile.classpath" />
-								<groovydoc destdir="${project.reporting.outputDirectory}/groovydoc"
-									sourcepath="${basedir}/src/main/groovy" use="true" windowtitle="${project.name}"
-									doctitle="${project.name}">
-									<link packages="java.,org.xml.,javax.,org.xml."
-										href="http://download.oracle.com/javase/6/docs/api" />
-									<link packages="org.junit.,junit.framework."
-										href="http://kentbeck.github.com/junit/javadoc/latest" />
+								<taskdef name="groovydoc" classname="org.codehaus.groovy.ant.Groovydoc" classpathref="maven.compile.classpath" />
+								<groovydoc destdir="${project.reporting.outputDirectory}/groovydoc" sourcepath="${basedir}/src/main/groovy" use="true" windowtitle="${project.name}" doctitle="${project.name}">
+									<link packages="java.,org.xml.,javax.,org.xml." href="http://download.oracle.com/javase/6/docs/api" />
+									<link packages="org.junit.,junit.framework." href="http://kentbeck.github.com/junit/javadoc/latest" />
 									<link packages="groovy.,org.codehaus.groovy." href="http://groovy.codehaus.org/api/" />
 								</groovydoc>
 							</target>
